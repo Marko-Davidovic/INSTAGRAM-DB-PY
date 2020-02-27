@@ -53,9 +53,9 @@ class profile(Base):
     __tablename__ = 'profile'
     id = Column(Integer, primary_key=True)
     posts = Column(String(250))
-    fallowers = Column(String(250))
-    following = Column(String(250))
-    messages = Column(String(250))
+    fallowers = Column(String(1000))
+    following = Column(String(1000))
+    messages = Column(String(1000))
     tagged_picture = Column(String(250), nullable=False)
     profile_id = Column(Integer, ForeignKey('profile.id'))
     profile = relationship(profile)
